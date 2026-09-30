@@ -1,80 +1,90 @@
 # 🎮 Python Hangman: Enhanced Edition
 
-A feature-rich console-based Hangman game built with Python. This project was developed as part of the **CodeAlpha Python Programming Internship (Task 1)** and expands upon the traditional Hangman game by adding hints, ASCII art, score tracking, and persistent high scores.
+A feature-rich console-based Hangman game built with Python. This project was developed as part of the **CodeAlpha Python Programming Internship – Task 1** and expands the traditional Hangman game with ASCII graphics, a hint system, win-streak tracking, and persistent high scores.
 
 ---
 
-## 📌 Features
+## 📖 Overview
+
+Hangman is a classic word-guessing game where players attempt to uncover a hidden word one letter at a time. This implementation enhances the gameplay experience with:
+
+- A large collection of words from multiple categories
+- Visual Hangman ASCII art
+- One-time hint system
+- High score persistence
+- Win streak tracking
+- Input validation and error handling
+- Round statistics and replay functionality
+
+---
+
+## ✨ Features
 
 ### 🎲 Random Word Selection
+The game randomly selects a word from a diverse collection of categories:
 
-* Randomly selects a word from a large collection of categories:
-
-  * Technology
-  * Animals
-  * Sports
-  * Countries
-  * Food & Drinks
-  * Science
-  * Music
-  * Geography
-  * Professions
-  * Everyday Objects
+- Technology
+- Animals
+- Sports
+- Countries
+- Food & Drinks
+- Science
+- Music
+- Geography
+- Professions
+- Everyday Objects
 
 ### 🎨 ASCII Hangman Graphics
-
-* Visual Hangman stages displayed after each incorrect guess.
-* Provides a more engaging gameplay experience.
+A visual Hangman figure is displayed and updated after each incorrect guess.
 
 ### 💡 Hint System
-
-* One hint is available per round.
-* Reveals a random hidden letter from the secret word.
-
-### 📊 Round Statistics
-
-Displays:
-
-* Total guesses made
-* Number of incorrect guesses
-* Win/Loss result
+- One hint per round
+- Reveals a random hidden letter
+- Helps players when they're stuck
 
 ### 🏆 High Score Tracking
+- Tracks highest consecutive win streak
+- Saves high scores locally in `highscore.txt`
+- Automatically loads previous records when the game starts
 
-* Tracks the highest consecutive win streak.
-* Saves high scores locally using a text file.
-* Automatically loads previous records when the game starts.
+### 📊 Round Statistics
+At the end of every round, the game displays:
 
-### 🔄 Replay Option
+- Total guesses made
+- Incorrect guesses
+- Win/Loss result
 
-* Play multiple rounds without restarting the program.
-* Maintains your current win streak across rounds.
+### 🔄 Replay Functionality
+Play unlimited rounds without restarting the program.
 
 ### ✅ Input Validation
+The game prevents:
 
-* Prevents invalid inputs.
-* Detects duplicate guesses.
-* Accepts both uppercase and lowercase letters.
+- Empty inputs
+- Multiple-character inputs
+- Non-alphabetic characters
+- Duplicate guesses
 
 ---
 
 ## 🛠 Technologies Used
 
-* Python 3
-* Random Module
-* File Handling
-* Lists
-* Functions
-* Loops
-* Conditional Statements
-* Exception Handling
+- Python 3
+- Random Module
+- File Handling
+- Exception Handling
+- Lists
+- Strings
+- Functions
+- Loops
+- Conditional Statements
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-Hangman-Game/
+HangmanGame/
 │
 ├── main.py
 ├── highscore.txt
@@ -83,21 +93,21 @@ Hangman-Game/
 
 ---
 
-## 🚀 How to Run
+## 🚀 Installation & Usage
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/Hangman-Game.git
-```
-
-### 2. Navigate to the Project Folder
+### Clone the Repository
 
 ```bash
-cd Hangman-Game
+git clone https://github.com/Syed-Nazeer-07/HangmanGame.git
 ```
 
-### 3. Run the Program
+### Navigate to the Project Folder
+
+```bash
+cd HangmanGame
+```
+
+### Run the Program
 
 ```bash
 python main.py
@@ -105,62 +115,117 @@ python main.py
 
 ---
 
-## 🎯 Gameplay Rules
+## 🎯 How to Play
 
-1. A random word is selected.
-2. The player guesses one letter at a time.
-3. Each incorrect guess adds a part to the Hangman drawing.
-4. The player has a maximum of 6 incorrect attempts.
-5. One hint can be used per game.
-6. Guess all letters before running out of attempts to win.
+1. Start the game.
+2. A random word will be selected.
+3. Guess one letter at a time.
+4. Correct guesses reveal letters in the word.
+5. Incorrect guesses reduce your remaining attempts.
+6. Use the **hint** command once per round if needed.
+7. Guess the entire word before all attempts are used.
+8. Try to build the highest win streak possible.
 
 ---
 
 ## 📸 Sample Gameplay
 
 ```text
-Word: _ _ _ _ _ _
+==================================================
+New Game Started!
+The word has 8 letters.
+==================================================
+
+Word: _ _ _ _ _ _ _ _
 Remaining attempts: 6
 
 Guess a letter: a
 
 Good job! 'a' is in the word.
 
-Word: _ a _ _ _ _
+Word: _ a _ _ _ _ _ _
+Remaining attempts: 6
 ```
 
 ---
 
-## 🎓 Internship Task
+## 🏅 Scoring System
 
-**CodeAlpha Python Programming Internship**
+### Win Streak
+- Each successful round increases your streak by 1.
+- Losing a round resets your streak.
+- The highest streak achieved is stored permanently.
 
-**Task 1: Hangman Game**
+### High Score File
+The game automatically creates and updates:
 
-Goal:
-Create a text-based Hangman game where the player guesses a hidden word one letter at a time using Python fundamentals such as loops, conditionals, lists, strings, and the random module.
+```text
+highscore.txt
+```
+
+This file stores your best win streak between sessions.
 
 ---
 
-## 🌟 Future Improvements
+## 🎓 Internship Task Information
 
-* Difficulty levels (Easy, Medium, Hard)
-* Category selection by player
-* Timer-based gameplay
-* Leaderboard system
-* Multiplayer mode
-* GUI version using Tkinter or PyQt
+### CodeAlpha Python Programming Internship
+
+**Task 1: Hangman Game**
+
+**Objective:**
+Create a text-based Hangman game where the player guesses a word one letter at a time using Python fundamentals such as:
+
+- Random module
+- Loops
+- Conditional statements
+- Strings
+- Lists
+- Functions
+
+This project fulfills and extends the internship requirements by adding additional gameplay features and persistent score tracking.
+
+---
+
+## 🌟 Future Enhancements
+
+Potential improvements for future versions:
+
+- Difficulty levels
+- Category selection menu
+- Leaderboard system
+- Multiplayer mode
+- Timer-based gameplay
+- GUI version using Tkinter
+- Sound effects
+- Online score storage
 
 ---
 
 ## 👨‍💻 Author
 
-Developed by **[Your Name]**
+**Syed Nazeer**
 
-GitHub: https://github.com/your-username
+- GitHub Profile: https://github.com/Syed-Nazeer-07
+- Repository: https://github.com/Syed-Nazeer-07/HangmanGame
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a Pull Request
 
 ---
 
 ## 📜 License
 
 This project is open-source and available under the MIT License.
+
+---
+
+⭐ If you enjoyed this project, consider giving the repository a star on GitHub!
